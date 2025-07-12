@@ -134,9 +134,13 @@ def generate_pdf_report(summary):
     return BytesIO(pdf_output)
 
 # Streamlit app setup
-st.set_page_config(page_title="Research Paper Evaluator", layout="centered")
-st.title("📄 Research Paper Evaluator (Enhanced)")
-
+st.set_page_config(
+    page_title="Research Paper Evaluator",
+    page_icon="📄",
+    layout="centered"
+)
+st.title("📄 Research Paper Evaluator")
+st.markdown("> 📌 Upload your thesis or paper to evaluate methodology, analysis, journals, key findings & writing style.")
 uploaded_file = st.file_uploader("Upload a .docx research paper", type=["docx", "pdf"])
 
 if uploaded_file:
